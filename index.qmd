@@ -19,7 +19,7 @@ editor:
 
 ## Introduction
 
-### What is "mehtod"?
+### What is "method"?
 
 This is an introduction to LASSO regression, which is a non-parametric
 estimator that estimates the conditional expectation of two variables
