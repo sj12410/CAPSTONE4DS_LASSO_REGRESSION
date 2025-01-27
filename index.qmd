@@ -19,17 +19,63 @@ editor:
 
 ## Introduction
 
+ 1.LASSO regression
+
+A statistical method called LASSO (Least Absolute Shrinkage and Selection Operator) regression is used to solve problems in predictive modelling, such as overfitting and optimism bias, particularly when working with big datasets and many of possible predictors. By essentially eliminating less significant variables, it reduces model complexity and enhances generalisation by lowering regression coefficients towards zero. The parameter (λ), which controls the amount of shrinkage, is usually chosen using k-fold cross-validation.
+
+LASSO has limits even though it can increase predicted accuracy, particularly in situations like genetic data analysis. It still needs outside confirmation and might not totally remove optimism bias and overfitting. 
+
+2.Application of LASSO Regression in Predictive Modelling"
+
+A popular statistical technique in predictive modelling is LASSO (Least Absolute Shrinkage and Selection Operator) regression, especially when working with datasets that contain a large number of possible predictor variables. LASSO's main advantage is that it can simultaneously choose variables and perform regularisation, which makes it an effective tool for building models that are less likely to overfit.
+
+In LASSO regression, the absolute values of the regression coefficients are penalised in order to estimate the model's coefficients. By reducing the coefficients to zero, this penalty term essentially removes unimportant or unnecessary variables from the model and forces them to have zero coefficients. This enhances the model's ability to generalise to new data and lowers its complexity.
+
 ### What is "method"?
 
-This is an introduction to LASSO regression, which is a non-parametric
-estimator that estimates the conditional expectation of two variables
-which is random. The goal of a kernel regression is to discover the
-non-linear relationship between two random variables. To discover the
-non-linear relationship, kernel estimator or kernel smoothing is the
-main method to estimate the curve for non-parametric statistics. In
-kernel estimator, weight function is known as kernel function
-[@efr2008]. Cite this paper [@bro2014principal]. The GEE [@wang2014].
-The PCA [@daffertshofer2004pca]
+
+3.**A Refinement of Lasso Regression Applied to Temperature Forecasting**
+
+This paper's main objective is to increase the accuracy of temperature forecasting in smart buildings by optimising HVAC (heating, ventilation, and air conditioning) systems through the use of model predictive controllers (MPC). This upgrade aims to keep building occupants comfortable while lowering energy use.
+
+
+Importance: A large amount of the energy used worldwide is consumed by buildings, especially for HVAC systems. In order to optimise HVAC control and lower energy use, accurate temperature forecasting is crucial. Longer sensor histories (up to 24 hours) may improve forecast accuracy, which could lead to higher energy savings and lower expenses for sensor installation and maintenance. 
+
+Problem and Solution: The forecast inaccuracy problem caused by the "one standard error" (1SE) heuristic in lasso regression is addressed in this study. When there are a lot of historical observations, this heuristic often produces lasso hyperparameter λ values that are too high, which can result in forecasts that are not very accurate.
+
+
+In order to address this, the study presents midfel, a development of the 1SE heuristic that modifies λ according to the error curve's shape. This method improves forecast accuracy by taking into account both the variance in the forecast error and the form of the error curve.
+
+**Methods**:
+With sensor data spanning up to 24 hours (quarter-hourly observations), the authors employ lasso regression for temperature forecasting in smart buildings.
+To increase forecast accuracy, the midfel refinement is performed to the lasso regression model.
+Their method improves the adjustment of λ by taking into account both the variance of the forecast error and the form of the error curve.
+
+Results:
+When midfel lasso regression is used instead of normal lasso regression, forecast accuracy is greatly increased. Increased accuracy can lower energy expenditures as well as the expenses of installing and maintaining sensors because fewer sensors are required to work at the same level. The findings imply that greater predicting may emerge from utilising longer sensor data histories, and that this advantage is amplified by midfel refinement.
+
+
+4.**Using LASSO regression to detect predictive aggregate effects in genetic studies**
+
+The purpose of this work is to examine how to choose the most informative genetic markers and phenotypic characteristics associated with a variable of interest using Least Absolute Shrinkage and Selection Operator (LASSO) regression. The objective is to use both genetic and phenotypic data to enhance risk prediction algorithms.
+
+Importance: This study is significant because personalised therapy and more effective healthcare solutions can result from accurate identification of these markers, which can also improve risk prediction models. In order to improve prediction accuracy, the study also intends to improve the model-building process by merging genetic information with phenotypic characteristics including age, sex, and smoking status.
+
+
+In order to address this issue, the authors suggest analysing genomic and phenotypic data from the genomic Analysis Workshop 17 (GAW17) exome simulation dataset using LASSO regression. The study contrasts various LASSO application techniques, such as:
+1.Applying LASSO to every genomic variation.
+2.Combining the chosen markers after applying LASSO to each gene or pathway.
+3.Applying logistic regression to the pooled genetic data after using LASSO for quantitative traits.
+
+
+**Methods**:
+
+• By dividing the data into training and testing sets, the authors ensure robustness in the results by evaluating each model's performance using 5-fold cross-validation.
+• For binary outcomes (such as illness status), LASSO regression is used to choose genetic variations and phenotypic characteristics based on a logistic regression model.
+
+
+Results: 
+Models that combined genetic and phenotypic data (age, sex, and smoking) fared better than genetic-only models, according to the study, with an AROC of 0.82 . The performance of genetic-only models was poorer (AROC ~ 0.55). Phenotypic variables were significant and frequently overshadowed genetic information. Restricted models avoided overfitting by having fewer variables and outperforming unconstrained models. Simpler LASSO models were more accurate than gene and pathway-based models. Common genetic variants, such as FLT1, were also found more frequently in the study, whereas uncommon variants were more difficult to find. Although adding phenotypic data improved prediction accuracy overall, the strategy was computationally expensive.
 
 This is my work and I want to add more work...
 
